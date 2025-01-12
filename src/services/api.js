@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = axios.create({ baseURL: "http://localhost:5000" });
+const API = axios.create({ baseURL: "https://todoback-rho.vercel.app" });
 
 export const fetchTasks = () => API.get("/tasks");
 export const addTask = (task) => API.post("/tasks", task);
