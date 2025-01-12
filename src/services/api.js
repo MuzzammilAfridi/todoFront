@@ -3,7 +3,7 @@ import axios from "axios";
 
 // const API = axios.create({ baseURL: "https://todoback-rho.vercel.app" });
 const API = axios.create({
-    baseURL: "https://todoback-rho.vercel.app",
+    baseURL: "https://todoback-mern.vercel.app",
     withCredentials: true, // Add this if the backend requires credentials
   });
 
