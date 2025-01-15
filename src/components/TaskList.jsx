@@ -26,7 +26,7 @@ console.log(tasks);
 
   return (
     <ul >
-      {tasks.map((task) => (
+      {tasks ? tasks.map((task) => (
         <li className="tast-title" key={task._id}>
           <input
             type="checkbox"
@@ -39,7 +39,7 @@ console.log(tasks);
           <button onClick={() => handleDelete(task._id)}>Delete</button>
           </div>
         </li>
-      ))}
+      )) : "Task is not present"}
     </ul>
   );
 };
