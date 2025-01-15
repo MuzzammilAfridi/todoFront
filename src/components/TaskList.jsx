@@ -3,6 +3,7 @@ import { fetchTasks, updateTask, deleteTask } from "../services/api";
 
 const TaskList = ({ startEditing }) => {
   const [tasks, setTasks] = useState([]);
+console.log(tasks);
 
   useEffect(() => {
     loadTasks();
