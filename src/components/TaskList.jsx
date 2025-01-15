@@ -26,20 +26,21 @@ console.log(tasks);
 
   return (
     <ul >
-      {tasks ? tasks.map((task) => (
-        <li className="tast-title" key={task._id}>
-          <input
-            type="checkbox"
-            checked={task.isCompleted}
-            onChange={() => toggleComplete(task)}
-          />
-          <span >{task.title}</span>
-          <div className="button-container">
-          <button onClick={() => startEditing(task)}>Edit</button>
-          <button onClick={() => handleDelete(task._id)}>Delete</button>
-          </div>
-        </li>
-      )) : "Task is not present"}
+     {tasks?.map((task, idx) => (
+  <li className="task-title" key={idx}>
+    <input
+      type="checkbox"
+      checked={task.isCompleted}
+      onChange={() => toggleComplete(task)}
+    />
+    <span>{task.title}</span>
+    <div className="button-container">
+      <button onClick={() => startEditing(task)}>Edit</button>
+      <button onClick={() => handleDelete(task._id)}>Delete</button>
+    </div>
+  </li>
+)) || <p>No tasks available</p>}
+
     </ul>
   );
 };
